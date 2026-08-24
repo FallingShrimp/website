@@ -1,5 +1,5 @@
 import { PeopleDescriptor, ProjectData } from "./structs";
-import data from "./info.json";
+import data from "./assets/info.json";
 
 export const labels: string[] = data.labels;
 export const email: string = data.email;

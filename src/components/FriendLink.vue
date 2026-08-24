@@ -2,16 +2,21 @@
 import { openWebsite } from "@/utils";
 import { PeopleDescriptor } from "@/structs";
 import { computed } from "vue";
+import AvatarImage from "./AvatarImage.vue";
 
 const props = defineProps<{
     people: PeopleDescriptor;
 }>();
-const avatarLink = computed(() => props.people.avatar || props.people.name);
+function avatarLink(base?: string) {
+    return base || props.people.name;
+};
 </script>
 <template>
     <div class="friend-link" @click="openWebsite(people.website)">
         <div class="avatar-wrapper">
-            <img v-if="avatarLink" :src="`friends/${avatarLink}.jpg`" class="avatar">
+            <!-- <img v-if="avatarLink" :src="`friends/${avatarLink}.jpg`" class="avatar"> -->
+            <AvatarImage :front="`friends/${avatarLink(people.avatar)}.jpg`"
+                :back="`friends/${avatarLink(people.innerAvatar || people.avatar)}.jpg`" type="small" />
         </div>
         <div class="info">
             <span class="name">{{ people.name }}</span>
@@ -39,17 +44,9 @@ const avatarLink = computed(() => props.people.avatar || props.people.name);
 }
 
 .avatar-wrapper {
-    --s: 75px;
     width: 75px;
     height: 75px;
     aspect-ratio: 1;
-}
-
-.avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
 }
 
 .info {

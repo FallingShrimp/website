@@ -13,6 +13,6 @@
     "ignorePatterns": [
         "dist",
         "node_modules",
-        "fs-context"
+        "submodules"
     ]
 }

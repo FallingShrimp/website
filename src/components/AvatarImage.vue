@@ -1,7 +1,14 @@
+<script setup lang="ts">
+defineProps<{
+    back: string;
+    front: string;
+    type: "big" | "small";
+}>();
+</script>
 <template>
-    <div class="box">
-        <img src="/avatars/shrimp.png" class="img">
-        <img src="/avatars/lycaon.jpg" class="front img">
+    <div class="box" :class="{ [type]: true }">
+        <img :src="back" :class="{ [type]: true }">
+        <img :src="front" class="front" :class="{ [type]: true }">
     </div>
 </template>
 <style scoped>
@@ -11,11 +18,19 @@
 
 .box {
     position: relative;
+}
+
+.box.big {
     width: var(--size);
     height: var(--size);
 }
 
-.img {
+.box.small {
+    width: 100%;
+    height: 100%;
+}
+
+img.big {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
@@ -23,6 +38,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+img.small {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;

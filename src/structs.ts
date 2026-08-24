@@ -2,6 +2,7 @@ export interface PeopleDescriptor {
     name: string;
     website?: string;
     avatar?: string;
+    innerAvatar?: string;
     description?: string;
     dangerous?: true;
 }

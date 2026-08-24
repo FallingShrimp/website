@@ -1,6 +1,6 @@
 <template>
     <div class="info">
-        <AvatarImage />
+        <AvatarImage back="/avatars/shrimp.png" front="/avatars/lycaon.jpg" type="big" />
         <NameLabel>陨落基围虾</NameLabel>
         <div>
             <BlockLabel v-for="label in labels" :key="label">{{ label }}</BlockLabel>
