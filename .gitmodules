@@ -4,3 +4,6 @@
 [submodule "submodules/fs-context-docs"]
 	path = submodules/fs-context-docs
 	url = https://github.com/Rundll86/fs-context-docs.git
+[submodule "src/articles"]
+	path = src/articles
+	url = https://github.com/Rundll86/articles
