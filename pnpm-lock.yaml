@@ -10,6 +10,9 @@ importers:
 
   .:
     dependencies:
+      path-browserify:
+        specifier: ^1.0.1
+        version: 1.0.1
       vue:
         specifier: ^3.5.13
         version: 3.5.28(typescript@5.9.3)
@@ -17,6 +20,9 @@ importers:
       '@types/node':
         specifier: ^25.3.0
         version: 25.3.0
+      '@types/path-browserify':
+        specifier: ^1.0.3
+        version: 1.0.3
       '@types/victor':
         specifier: ^1.1.5
         version: 1.1.5
@@ -821,6 +827,9 @@ packages:
 
   '@types/node@25.3.0':
     resolution: {integrity: sha512-4K3bqJpXpqfg2XKGK9bpDTc6xO/xoUP/RBWS7AtRMug6zZFaRekiLzjVtAoZMquxoAbzBvy5nxQ7veS5eYzf8A==}
+
+  '@types/path-browserify@1.0.3':
+    resolution: {integrity: sha512-ZmHivEbNCBtAfcrFeBCiTjdIc2dey0l7oCGNGpSuRTy8jP6UVND7oUowlvDujBy8r2Hoa8bfFUOCiPWfmtkfxw==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -2952,6 +2961,8 @@ snapshots:
   '@types/node@25.3.0':
     dependencies:
       undici-types: 7.18.2
+
+  '@types/path-browserify@1.0.3': {}
 
   '@types/unist@3.0.3': {}
 

@@ -1,5 +1,5 @@
 <template>
-    <BackgroundImage :blur="bluring" />
+    <BackgroundImage :blur="bluring" :disable="true" />
     <FullscreenSize class="container-app">
         <div class="main" @mouseover="bluring = true" @mouseout="bluring = false">
             <SelfInformation />

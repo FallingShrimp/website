@@ -8,3 +8,6 @@ export async function copy(data: string) {
 export function openWebsite(url?: string) {
     if (url) window.open(url, "_blank");
 }
+export function isDev() {
+    return import.meta.env.DEV;
+}

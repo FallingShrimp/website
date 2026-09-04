@@ -13,10 +13,12 @@
         "format": "oxlint --fix ."
     },
     "dependencies": {
+        "path-browserify": "^1.0.1",
         "vue": "^3.5.13"
     },
     "devDependencies": {
         "@types/node": "^25.3.0",
+        "@types/path-browserify": "^1.0.3",
         "@types/victor": "^1.1.5",
         "@vitejs/plugin-vue": "^6.0.8",
         "jiti": "^2.6.1",
