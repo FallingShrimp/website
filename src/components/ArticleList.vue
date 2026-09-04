@@ -20,4 +20,8 @@ const currentOpening = ref<string | null>("");
     border-radius: 20px;
     overflow-y: auto;
 }
+
+.articles::-webkit-scrollbar {
+    display: none;
+}
 </style>

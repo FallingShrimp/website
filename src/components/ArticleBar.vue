@@ -64,17 +64,18 @@ const emit = defineEmits(["open", "close"]);
     height: 0;
     padding: 0;
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 0;
     border: solid gray 3px;
     border-top: 0;
     border-bottom: 0;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.2);
+    width: calc(100% - 40px);
 }
 
 .content.showing {
     height: auto;
     padding: 10px 30px;
+    margin: 10px 20px;
 }
 </style>
