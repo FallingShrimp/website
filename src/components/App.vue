@@ -1,5 +1,5 @@
 <template>
-    <BackgroundImage :blur="bluring" :disable="true" />
+    <BackgroundImage :blur="bluring" :disable="!isDev()" />
     <FullscreenSize class="container-app">
         <div class="main" @mouseover="bluring = true" @mouseout="bluring = false">
             <SelfInformation />
@@ -68,6 +68,10 @@
                 </ProjectCard>
             </template>
             <HorizontalLine />
+            <BigTitle>ARTICLES</BigTitle>
+            <br>
+            <ArticleList :data="articles" />
+            <HorizontalLine />
             <BigTitle>友情链接</BigTitle><br>
             <span>相关工作室</span>
             <div class="friend-links">
@@ -109,7 +113,9 @@ import AlignBox from "./AlignBox.vue";
 import WhiteSpace from "./WhiteSpace.vue";
 import BackgroundImage from "./BackgroundImage.vue";
 import { aliases, frameworks, friends, cakeIsLie, languages, learnings, otherContactWay, projects, specialFriends, studios, teachers } from "@/info";
-import { copy } from "@/utils";
+import { copy, isDev } from "@/utils";
+import ArticleList from "./ArticleList.vue";
+import { articles } from "@/articles";
 
 const bluring = ref(false);
 </script>
