@@ -68,9 +68,9 @@
                 </ProjectCard>
             </template>
             <HorizontalLine />
-            <BigTitle>ARTICLES</BigTitle>
-            <br>
-            <ArticleList :data="articles" />
+            <DeskableTitle title="ARTICLES">
+                <ArticleList :data="articles" />
+            </DeskableTitle>
             <HorizontalLine />
             <BigTitle>友情链接</BigTitle><br>
             <span>相关工作室</span>
@@ -116,6 +116,7 @@ import { aliases, frameworks, friends, cakeIsLie, languages, learnings, otherCon
 import { copy, isDev } from "@/utils";
 import ArticleList from "./ArticleList.vue";
 import { articles } from "@/articles";
+import DeskableTitle from "./DeskableTitle.vue";
 
 const bluring = ref(false);
 </script>
