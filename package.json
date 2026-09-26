@@ -13,8 +13,6 @@
         "format": "oxlint --fix ."
     },
     "dependencies": {
-        "@vunk/markdown": "^2.2.0",
-        "markdown-it-vue": "^1.1.7",
         "path-browserify": "^1.0.1",
         "v3-markdown-stream": "^1.5.0",
         "vue": "^3.5.13"
@@ -22,15 +20,11 @@
     "devDependencies": {
         "@types/node": "^25.3.0",
         "@types/path-browserify": "^1.0.3",
-        "@types/victor": "^1.1.5",
         "@vitejs/plugin-vue": "^6.0.8",
         "jiti": "^2.6.1",
         "npm-run-all": "^4.1.5",
         "oxlint": "^1.78.0",
-        "planck": "^1.4.2",
         "typescript": "^5.9.3",
-        "vecjs": "^1.1.2",
-        "victor": "^1.1.0",
         "vite": "^8.2.1",
         "vue-tsc": "^3.3.9"
     },
