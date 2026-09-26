@@ -1,9 +1,8 @@
 <template>
     <div class="project" @click="openWebsite(website)">
-        <img class="avatar" :src="image" />
+        <img class="avatar" :src="`/projects/${image}`" />
         <div class="description">
-            <span class="title">{{ title }}</span
-            ><br />
+            <span class="title">{{ title }}</span><br />
             <div class="content">
                 <slot></slot><br />
                 &nbsp;

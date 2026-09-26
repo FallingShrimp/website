@@ -15,11 +15,8 @@ function avatarLink(base?: string) {
     <div class="friend-link" @click="openWebsite(people.website)">
         <div class="avatar-wrapper">
             <!-- <img v-if="avatarLink" :src="`friends/${avatarLink}.jpg`" class="avatar"> -->
-            <AvatarImage
-                :front="`friends/${avatarLink(people.avatar)}.jpg`"
-                :back="`friends/${avatarLink(people.innerAvatar || people.avatar)}.jpg`"
-                type="small"
-            />
+            <AvatarImage :front="`${avatarLink(people.avatar)}.jpg`"
+                :back="`${avatarLink(people.innerAvatar || people.avatar)}.jpg`" type="small" />
         </div>
         <div class="info">
             <span class="name">{{ people.name }}</span>

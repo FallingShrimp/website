@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import { MarkdownRender } from "v3-markdown-stream";
-import "v3-markdown-stream/dist/v3-markdown-stream.css";
+import MarkdownIt from 'markdown-it';
+import { computed } from 'vue';
 
-defineProps<{ title: string; content: string; showing: boolean }>();
+const props = defineProps<{ title: string; content: string; showing: boolean }>();
 const emit = defineEmits(["open", "close"]);
+const renderer = new MarkdownIt({
+    html: true,
+    linkify: true
+});
+const html = computed(() => renderer.render(props.content));
+const raw = computed(() => `${new DOMParser().parseFromString(html.value, "text/html").documentElement.textContent.split(/[\n\r]/)[0]}...`);
 </script>
 <template>
     <div class="article-bar" :class="{ showing }" @click="showing ? emit('close') : emit('open')">
         <span class="text title ellipsis">{{ title }}</span>
-        <span class="details ellipsis" v-if="!showing">{{ content }}</span>
-        <MarkdownRender class="content text" :class="{ showing }" :markInfo="content" />
+        <span class="details ellipsis" v-if="!showing">{{ raw }}</span>
+        <div class="content" :class="{ showing }" v-html="html"></div>
     </div>
 </template>
 <style scoped>
@@ -36,6 +42,7 @@ const emit = defineEmits(["open", "close"]);
     color: gray;
     font-size: 14px;
     width: 100%;
+    text-align: left;
 }
 
 .article-bar {
@@ -71,6 +78,16 @@ const emit = defineEmits(["open", "close"]);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     width: calc(100% - 40px);
+    text-align: left;
+}
+
+.content,
+.content * {
+    color: black;
+}
+
+.content:deep(img) {
+    max-width: 200px;
 }
 
 .content.showing {

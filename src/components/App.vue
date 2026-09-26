@@ -133,13 +133,13 @@ import {
     studios,
     teachers,
 } from "@/info";
-import { copy } from "@/utils";
+import { copy, isDev } from "@/utils";
 import ArticleList from "./ArticleList.vue";
 import { articles } from "@/articles";
 import DeskableTitle from "./DeskableTitle.vue";
 
 const bluring = ref(false);
-const disableBackground = ref(false);
+const disableBackground = ref(isDev());
 
 onMounted(() => {
     document.addEventListener("keydown", (e) => {
