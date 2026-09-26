@@ -4,7 +4,10 @@ import path, { extname } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig, type Plugin } from "vite";
-const rootDir = path.dirname(fileURLToPath(import.meta.url));
+const root = path.dirname(fileURLToPath(import.meta.url));
+const submodules: Record<string, string> = {
+    "claude-thunder": "claude-thunder"
+};
 export default defineConfig({
     base: "./",
     plugins: [
@@ -13,19 +16,15 @@ export default defineConfig({
             name: "sb",
             apply: (config, { command }) => command === "build" && !config.build?.ssr,
             closeBundle() {
-                const submodules: Record<string, string> = {
-                    "claude-thunder": "claude-thunder",
-                    "fs-context-docs": "fs-context",
-                };
                 for (const submodule of Object.keys(submodules)) {
                     execSync("pnpm build", {
-                        cwd: path.join(rootDir, `submodules/${submodule}`),
+                        cwd: path.join(root, `submodules/${submodule}`),
                         stdio: "inherit",
                     });
                 }
                 for (const [src, dest] of Object.entries(submodules)) {
-                    const from = path.join(rootDir, `submodules/${src}/dist`);
-                    const to = path.join(rootDir, `dist/${dest}`);
+                    const from = path.join(root, `submodules/${src}/dist`);
+                    const to = path.join(root, `dist/${dest}`);
                     rmSync(to, { recursive: true, force: true });
                     cpSync(from, to, { recursive: true });
                 }
@@ -35,9 +34,7 @@ export default defineConfig({
             name: "devserver",
             apply: "serve",
             configureServer(server) {
-                const distMounts: Record<string, string> = Object.fromEntries(
-                    ["claude-thunder", "fs-context"].map((e) => [`/${e}`, e]),
-                );
+                const distMounts: Record<string, string> = Object.fromEntries(Object.values(submodules).map((e) => [`/${e}`, e]),);
                 server.middlewares.use((req, res, next) => {
                     let url: string;
                     try {
@@ -49,7 +46,7 @@ export default defineConfig({
                         (p) => url === p || url.startsWith(p + "/"),
                     );
                     if (!prefix) return next();
-                    const base = path.join(rootDir, "dist", distMounts[prefix]);
+                    const base = path.join(root, "dist", distMounts[prefix]);
                     const file = path.resolve(base, url.slice(prefix.length).replace(/^\/+/, ""));
                     if (file !== base && !file.startsWith(base + path.sep)) {
                         res.statusCode = 403;
