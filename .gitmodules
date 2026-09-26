@@ -1,15 +1,9 @@
 [submodule "submodules/claude-thunder"]
 	path = submodules/claude-thunder
-	url = https://github.com/Rundll86/claude-thunder
+	url = https://github.com/FallingShrimp/claude-thunder
 [submodule "submodules/fs-context-docs"]
 	path = submodules/fs-context-docs
-	url = https://github.com/Rundll86/fs-context-docs.git
+	url = https://github.com/FallingShrimp/fs-context-docs
 [submodule "src/articles"]
 	path = src/articles
-	url = https://github.com/Rundll86/articles
-[submodule ".\\src\\articles\\"]
 	url = https://github.com/FallingShrimp/articles
-[submodule ".\\submodules\\claude-thunder\\"]
-	url = https://github.com/FallingShrimp/claude-thunder
-[submodule ".\\submodules\\fs-context-docs\\"]
-	url = https://github.com/FallingShrimp/fs-context-docs
