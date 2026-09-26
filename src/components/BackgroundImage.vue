@@ -10,10 +10,12 @@ img {
     height: 100%;
     object-fit: cover;
     filter: blur(0);
+    opacity: 1;
 }
 
 img.blur {
-    filter: blur(5px);
+    opacity: 0.6;
+    filter: blur(10px);
     transform: scale(1.02);
 }
 
