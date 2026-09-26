@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BigTitle from './BigTitle.vue';
+import BigTitle from "./BigTitle.vue";
 defineProps<{ title: string }>();
 const opening = defineModel<boolean>({ default: false });
 function switchState() {

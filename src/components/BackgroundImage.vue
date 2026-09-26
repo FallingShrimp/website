@@ -1,6 +1,6 @@
 <template>
     <FullscreenSize>
-        <img v-if="!disable" src="./assets/background.jpg" :class="{ blur }">
+        <img v-if="!disable" src="./assets/background.jpg" :class="{ blur }" />
         <div v-else class="placeholder"></div>
     </FullscreenSize>
 </template>
@@ -27,6 +27,6 @@ img.blur {
 import FullscreenSize from "./FullscreenSize.vue";
 defineProps({
     disable: Boolean,
-    blur: Boolean
+    blur: Boolean,
 });
 </script>

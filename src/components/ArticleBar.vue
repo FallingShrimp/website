@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { MarkdownRender } from "v3-markdown-stream";
-import 'v3-markdown-stream/dist/v3-markdown-stream.css';
+import "v3-markdown-stream/dist/v3-markdown-stream.css";
 
-defineProps<{ title: string, content: string, showing: boolean }>();
+defineProps<{ title: string; content: string; showing: boolean }>();
 const emit = defineEmits(["open", "close"]);
 </script>
 <template>

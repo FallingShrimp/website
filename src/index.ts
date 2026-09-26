@@ -7,20 +7,13 @@ import { isDev } from "./utils";
 import { articles } from "./articles";
 // import Fallen from "./components/Fallen.vue";
 
-const app = Vue.createApp(App);
-app.mixin({
-    data() {
-        return {
-            window
-        };
-    }
-});
+const app = isDev() ? Vue.createApp(App) : Vue.createSSRApp(App);
 app.mount("#app");
 
 if (isDev()) {
     console.log(articles);
 } else {
-    rawTexts.split("\n").forEach(e => {
+    rawTexts.split("\n").forEach((e) => {
         console.log(e);
         console.log("---");
     });

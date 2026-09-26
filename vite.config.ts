@@ -11,14 +11,17 @@ export default defineConfig({
         vue(),
         {
             name: "sb",
-            apply: "build",
+            apply: (config, { command }) => command === "build" && !config.build?.ssr,
             closeBundle() {
                 const submodules: Record<string, string> = {
                     "claude-thunder": "claude-thunder",
-                    "fs-context-docs": "fs-context"
+                    "fs-context-docs": "fs-context",
                 };
                 for (const submodule of Object.keys(submodules)) {
-                    execSync("pnpm build", { cwd: path.join(rootDir, `submodules/${submodule}`), stdio: "inherit" });
+                    execSync("pnpm build", {
+                        cwd: path.join(rootDir, `submodules/${submodule}`),
+                        stdio: "inherit",
+                    });
                 }
                 for (const [src, dest] of Object.entries(submodules)) {
                     const from = path.join(rootDir, `submodules/${src}/dist`);
@@ -26,13 +29,15 @@ export default defineConfig({
                     rmSync(to, { recursive: true, force: true });
                     cpSync(from, to, { recursive: true });
                 }
-            }
+            },
         } satisfies Plugin,
         {
             name: "devserver",
             apply: "serve",
             configureServer(server) {
-                const distMounts: Record<string, string> = Object.fromEntries(["claude-thunder", "fs-context"].map(e => [`/${e}`, e]));
+                const distMounts: Record<string, string> = Object.fromEntries(
+                    ["claude-thunder", "fs-context"].map((e) => [`/${e}`, e]),
+                );
                 server.middlewares.use((req, res, next) => {
                     let url: string;
                     try {
@@ -40,7 +45,9 @@ export default defineConfig({
                     } catch {
                         return next();
                     }
-                    const prefix = Object.keys(distMounts).find((p) => url === p || url.startsWith(p + "/"));
+                    const prefix = Object.keys(distMounts).find(
+                        (p) => url === p || url.startsWith(p + "/"),
+                    );
                     if (!prefix) return next();
                     const base = path.join(rootDir, "dist", distMounts[prefix]);
                     const file = path.resolve(base, url.slice(prefix.length).replace(/^\/+/, ""));
@@ -58,39 +65,42 @@ export default defineConfig({
                         res.end();
                         return;
                     }
-                    res.setHeader("Content-Type", {
-                        ".html": "text/html; charset=utf-8",
-                        ".js": "text/javascript; charset=utf-8",
-                        ".mjs": "text/javascript; charset=utf-8",
-                        ".css": "text/css; charset=utf-8",
-                        ".json": "application/json; charset=utf-8",
-                        ".png": "image/png",
-                        ".jpg": "image/jpeg",
-                        ".jpeg": "image/jpeg",
-                        ".gif": "image/gif",
-                        ".webp": "image/webp",
-                        ".svg": "image/svg+xml",
-                        ".ico": "image/x-icon",
-                        ".mp3": "audio/mpeg",
-                        ".wav": "audio/wav",
-                        ".woff": "font/woff",
-                        ".woff2": "font/woff2",
-                        ".ttf": "font/ttf",
-                        ".txt": "text/plain; charset=utf-8",
-                        ".md": "text/markdown; charset=utf-8",
-                        ".xml": "application/xml"
-                    }[extname(target).toLowerCase()] ?? "application/octet-stream");
+                    res.setHeader(
+                        "Content-Type",
+                        {
+                            ".html": "text/html; charset=utf-8",
+                            ".js": "text/javascript; charset=utf-8",
+                            ".mjs": "text/javascript; charset=utf-8",
+                            ".css": "text/css; charset=utf-8",
+                            ".json": "application/json; charset=utf-8",
+                            ".png": "image/png",
+                            ".jpg": "image/jpeg",
+                            ".jpeg": "image/jpeg",
+                            ".gif": "image/gif",
+                            ".webp": "image/webp",
+                            ".svg": "image/svg+xml",
+                            ".ico": "image/x-icon",
+                            ".mp3": "audio/mpeg",
+                            ".wav": "audio/wav",
+                            ".woff": "font/woff",
+                            ".woff2": "font/woff2",
+                            ".ttf": "font/ttf",
+                            ".txt": "text/plain; charset=utf-8",
+                            ".md": "text/markdown; charset=utf-8",
+                            ".xml": "application/xml",
+                        }[extname(target).toLowerCase()] ?? "application/octet-stream",
+                    );
                     createReadStream(target).pipe(res);
                 });
-            }
+            },
         } satisfies Plugin,
     ],
     resolve: {
         alias: {
-            "@": fileURLToPath(new URL("./src", import.meta.url))
-        }
+            "@": fileURLToPath(new URL("./src", import.meta.url)),
+        },
     },
     server: {
-        port: 25565
-    }
+        port: 25565,
+    },
 });

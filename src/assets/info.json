@@ -13,11 +13,7 @@
         "Github": "https://github.com/Rundll86",
         "X/Twitter": "https://x.com/fallingshrimp"
     },
-    "languages": [
-        "TypeScript / JavaScript",
-        "Rust / C#",
-        "GDScript / Python"
-    ],
+    "languages": ["TypeScript / JavaScript", "Rust / C#", "GDScript / Python"],
     "frameworks": [
         "Vue / Nine9 (Webpack/tsup)",
         "Hono.js / Flask",
@@ -25,12 +21,7 @@
         "Unity / Godot.NET",
         "TModLoader"
     ],
-    "learnings": [
-        "片段着色器",
-        "2D骨骼动画",
-        "Animation Blend Tree",
-        "Tauri"
-    ],
+    "learnings": ["片段着色器", "2D骨骼动画", "Animation Blend Tree", "Tauri"],
     "studios": [
         {
             "name": "SolariiX",

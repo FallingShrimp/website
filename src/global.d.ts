@@ -3,5 +3,5 @@ declare module "*.txt?raw" {
     export default content;
 }
 declare module "v3-markdown-stream" {
-    export class MarkdownRender { }
+    export class MarkdownRender {}
 }

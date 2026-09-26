@@ -4,7 +4,7 @@
     box-sizing: border-box;
     border: none;
     outline: none;
-    transition: .3s all ease-out;
+    transition: 0.3s all ease-out;
     color: white;
 }
 

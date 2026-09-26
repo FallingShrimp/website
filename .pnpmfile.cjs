@@ -6,6 +6,6 @@ module.exports = {
                 pkg.dependencies.vue = "2.7.16";
             }
             return pkg;
-        }
-    }
+        },
+    },
 };

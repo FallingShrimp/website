@@ -1,6 +1,7 @@
 <template>
     <div>
-        <span class="title">{{ title }}</span><br>
+        <span class="title">{{ title }}</span
+        ><br />
         <slot></slot>
     </div>
 </template>
@@ -22,10 +23,13 @@ div {
     background-color: rgba(0, 0, 0, 0.35);
     width: 100px;
     padding: 2px 0;
-    clip-path: polygon(0 50%, var(--size) 0,
-            calc(100% - var(--size)) 0,
-            100% 50%,
-            calc(100% - var(--size)) 100%,
-            var(--size) 100%);
+    clip-path: polygon(
+        0 50%,
+        var(--size) 0,
+        calc(100% - var(--size)) 0,
+        100% 50%,
+        calc(100% - var(--size)) 100%,
+        var(--size) 100%
+    );
 }
 </style>

@@ -1,14 +1,15 @@
 <template>
     <div class="project" @click="openWebsite(website)">
-        <img class="avatar" :src="image">
+        <img class="avatar" :src="image" />
         <div class="description">
-            <span class="title">{{ title }}</span><br>
+            <span class="title">{{ title }}</span
+            ><br />
             <div class="content">
-                <slot></slot><br>
+                <slot></slot><br />
                 &nbsp;
             </div>
             <div class="cuts">
-                <div class="cut" style="--count: 1;--pad-left:14px">技术栈</div>
+                <div class="cut" style="--count: 1; --pad-left: 14px">技术栈</div>
                 <div class="cut gaper" style="--count: 2">{{ techStack }}</div>
                 <div class="cut" style="--count: 3">分类</div>
                 <div class="cut gaper" style="--count: 4">{{ category }}</div>
@@ -24,7 +25,7 @@ defineProps({
     image: String,
     techStack: String,
     category: String,
-    website: String
+    website: String,
 });
 </script>
 <style scoped>

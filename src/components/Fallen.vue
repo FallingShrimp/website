@@ -1,3 +1,1 @@
-<template>
-    There's nothing here.
-</template>
+<template>There's nothing here.</template>

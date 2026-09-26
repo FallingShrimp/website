@@ -1,8 +1,6 @@
 <template>
     <LinkA class="link" :href="`https://e621.net/posts?tags=${url}`">
-        <template #prompt>
-            跳转的页面可能会引起你的不适，请谨慎斟酌
-        </template>
+        <template #prompt> 跳转的页面可能会引起你的不适，请谨慎斟酌 </template>
         <slot></slot>
     </LinkA>
 </template>
