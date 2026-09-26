@@ -1,5 +1,5 @@
 <template>
-    <BackgroundImage :blur="bluring" :disable="!isDev()" />
+    <BackgroundImage :blur="bluring" :disable="disableBackground" />
     <FullscreenSize class="container-app">
         <div class="main" @mouseover="bluring = true" @mouseout="bluring = false">
             <SelfInformation />
@@ -99,7 +99,7 @@
     </FullscreenSize>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import FullscreenSize from "./FullscreenSize.vue";
 import DescriptionParagraph from "./DescriptionParapragh.vue";
 import OutLink from "./OutLink.vue";
@@ -113,12 +113,21 @@ import AlignBox from "./AlignBox.vue";
 import WhiteSpace from "./WhiteSpace.vue";
 import BackgroundImage from "./BackgroundImage.vue";
 import { aliases, frameworks, friends, cakeIsLie, languages, learnings, otherContactWay, projects, specialFriends, studios, teachers } from "@/info";
-import { copy, isDev } from "@/utils";
+import { copy } from "@/utils";
 import ArticleList from "./ArticleList.vue";
 import { articles } from "@/articles";
 import DeskableTitle from "./DeskableTitle.vue";
 
 const bluring = ref(false);
+const disableBackground = ref(false);
+
+onMounted(() => {
+    document.addEventListener("keydown", e => {
+        if (e.code === "KeyB") {
+            disableBackground.value = !disableBackground.value;
+        }
+    });
+});
 </script>
 <style scoped>
 .container-app {
