@@ -106,16 +106,16 @@
     ],
     "projects": [
         {
-            "website": "https://github.com/FallingShrimp/NDDrone-SDK",
-            "image": "nds.jpg",
-            "title": "NDDrone-SDK",
-            "techStack": "Python",
-            "category": "软件",
-            "description": "基于SSVEP BCI接口技术实现的 脑机接口-无人机飞控 桥接技术。"
+            "website": "https://github.com/Shrimp-VM",
+            "image": "svm.jpg",
+            "title": "Shrimp-VM",
+            "techStack": "Godot",
+            "category": "框架",
+            "description": "一个Godot4.6高级编程语言VM，供玩家为UGC内容搭建自定义行为。"
         },
         {
             "website": "https://github.com/FallingShrimp/nine",
-            "image": "nine.jpg",
+            "image": "ninesols.jpg",
             "title": "Nine-9",
             "techStack": "Vanilla",
             "category": "框架",
@@ -124,18 +124,10 @@
         {
             "website": "https://github.com/FallingShrimp/BeastBeat-proxy",
             "image": "fsc.jpg",
-            "title": "Patreon-Proxy",
+            "title": "BeastBeat-Proxy",
             "techStack": "Python",
             "category": "工具",
-            "description": "代理来自Patreon OAuth2 API的流量，实现绕过部分游戏的Patreon登录验证。"
-        },
-        {
-            "website": "https://github.com/FallingShrimp/script-editor-2",
-            "image": "se2.jpg",
-            "title": "ScriptEditor",
-            "techStack": "Vue",
-            "category": "工具",
-            "description": "基于GUI的游戏剧本设计器，让不会写代码的文案师也能组织游戏剧本。"
+            "description": "代理来自Patreon OAuth2的流量，绕过某神秘游戏的Patreon登录验证。"
         }
     ],
     "aliases": [
