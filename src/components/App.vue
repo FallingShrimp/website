@@ -9,18 +9,14 @@
                 有梦想，但仍在学习的路上，尚无法实现。
             </DescriptionParagraph>
             <DescriptionParagraph title="技能">
-                我讨厌 <b>vibe-coding </b> <OutLink href="/claude-thunder">......吗？</OutLink
-                ><br />
+                我讨厌 <b>vibe-coding </b>
+                <OutLink href="/claude-thunder">......吗？</OutLink><br />
                 我用 <b>Godot</b> 和 <b>Unity</b> 做过一些游戏，尚未发布，详见
-                <OutLink
-                    href="https://github.com/Rundll86?tab=repositories&q=topic%3Agame&type=public"
-                    >Github</OutLink
-                >
+                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Agame&type=public">Github
+                </OutLink>
                 。<br />
                 我热爱设计 <b>类型安全</b> / <b>高度IntelliSense</b> 的开发框架，详见
-                <OutLink
-                    href="https://github.com/Rundll86?tab=repositories&q=topic%3Aframework&type=public"
-                    >Github
+                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Aframework&type=public">Github
                 </OutLink>
                 。<br />
                 <AlignBox>
@@ -56,8 +52,8 @@
                         <img src="/oc.jpg" class="oc-preview" />
                         <img src="/avatars/shrimp-background.jpg" class="oc-preview" />
                     </template>
-                    自设/OC：希利普医生 </OutLink
-                ><br />
+                    自设/OC：希利普医生
+                </OutLink><br />
                 大尾巴白狼疑似命中注定。<br />
                 推荐观看：<br />
                 <FriendLink :people="specialFriends.lycaon" />
@@ -67,24 +63,15 @@
                 邮箱：<OutLink href="mailto:3161880837@qq.com">3161880837@qq.com</OutLink><br />
                 QQ：<OutLink @click="copy('3161880837')">3161880837</OutLink><br />
                 <div class="links">
-                    <OutLink
-                        v-for="(link, name, index) in otherContactWay"
-                        :href="link"
-                        :key="index"
-                        >{{ name }}</OutLink
-                    >
+                    <OutLink v-for="(link, name, index) in otherContactWay" :href="link" :key="index">{{ name }}
+                    </OutLink>
                 </div>
             </DescriptionParagraph>
             <HorizontalLine />
             <BigTitle>development</BigTitle><br />
             <template v-for="project in projects" :key="project.title">
-                <ProjectCard
-                    :website="project.website"
-                    :image="project.image"
-                    :title="project.title"
-                    :tech-stack="project.techStack"
-                    :category="project.category"
-                >
+                <ProjectCard :website="project.website" :image="project.image" :title="project.title"
+                    :tech-stack="project.techStack" :category="project.category">
                     {{ project.description }}
                 </ProjectCard>
             </template>
@@ -113,8 +100,7 @@
             <span>本网站的别名</span><br />
             <AlignBox>
                 <template v-for="alias in aliases" :key="alias">
-                    <OutLink :href="`https://${alias}`">{{ alias }}</OutLink
-                    ><br />
+                    <OutLink :href="`https://${alias}`">{{ alias }}</OutLink><br />
                 </template>
             </AlignBox>
         </div>

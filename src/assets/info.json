@@ -10,10 +10,14 @@
     "qq": 3161880837,
     "otherContactWay": {
         "哔哩哔哩": "https://space.bilibili.com/649063815",
-        "Github": "https://github.com/Rundll86",
+        "Github": "https://github.com/FallingShrimp",
         "X/Twitter": "https://x.com/fallingshrimp"
     },
-    "languages": ["TypeScript / JavaScript", "Rust / C#", "GDScript / Python"],
+    "languages": [
+        "TypeScript / JavaScript",
+        "Rust / C#",
+        "GDScript / Python"
+    ],
     "frameworks": [
         "Vue / Nine9 (Webpack/tsup)",
         "Hono.js / Flask",
@@ -21,7 +25,12 @@
         "Unity / Godot.NET",
         "TModLoader"
     ],
-    "learnings": ["片段着色器", "2D骨骼动画", "Animation Blend Tree", "Tauri"],
+    "learnings": [
+        "片段着色器",
+        "2D骨骼动画",
+        "Animation Blend Tree",
+        "Tauri"
+    ],
     "studios": [
         {
             "name": "SolariiX",
@@ -97,7 +106,7 @@
     ],
     "projects": [
         {
-            "website": "https://github.com/Rundll86/NDDrone-SDK",
+            "website": "https://github.com/FallingShrimp/NDDrone-SDK",
             "image": "nds.jpg",
             "title": "NDDrone-SDK",
             "techStack": "Python",
@@ -105,7 +114,7 @@
             "description": "基于SSVEP BCI接口技术实现的 脑机接口-无人机飞控 桥接技术。"
         },
         {
-            "website": "https://github.com/Rundll86/nine",
+            "website": "https://github.com/FallingShrimp/nine",
             "image": "nine.jpg",
             "title": "Nine-9",
             "techStack": "Vanilla",
@@ -113,7 +122,7 @@
             "description": "一个轻量、高性能、类型安全、纯运行时的响应式 UserScript 框架。"
         },
         {
-            "website": "https://github.com/Rundll86/BeastBeat-proxy",
+            "website": "https://github.com/FallingShrimp/BeastBeat-proxy",
             "image": "fsc.jpg",
             "title": "Patreon-Proxy",
             "techStack": "Python",
@@ -121,7 +130,7 @@
             "description": "代理来自Patreon OAuth2 API的流量，实现绕过部分游戏的Patreon登录验证。"
         },
         {
-            "website": "https://github.com/Rundll86/script-editor-2",
+            "website": "https://github.com/FallingShrimp/script-editor-2",
             "image": "se2.jpg",
             "title": "ScriptEditor",
             "techStack": "Vue",
