@@ -6,7 +6,7 @@ import vue from "@vitejs/plugin-vue";
 import { defineConfig, type Plugin } from "vite";
 const root = path.dirname(fileURLToPath(import.meta.url));
 const submodules: Record<string, string> = {
-    "claude-thunder": "claude-thunder"
+    "claude-thunder": "claude-thunder",
 };
 export default defineConfig({
     base: "./",
@@ -34,7 +34,9 @@ export default defineConfig({
             name: "devserver",
             apply: "serve",
             configureServer(server) {
-                const distMounts: Record<string, string> = Object.fromEntries(Object.values(submodules).map((e) => [`/${e}`, e]),);
+                const distMounts: Record<string, string> = Object.fromEntries(
+                    Object.values(submodules).map((e) => [`/${e}`, e]),
+                );
                 server.middlewares.use((req, res, next) => {
                     let url: string;
                     try {

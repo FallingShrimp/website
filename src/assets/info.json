@@ -13,23 +13,10 @@
         "Github": "https://github.com/FallingShrimp",
         "X/Twitter": "https://x.com/fallingshrimp"
     },
-    "languages": [
-        "TypeScript / JavaScript",
-        "Rust / C#",
-        "GDScript / Python"
-    ],
-    "frameworks": [
-        "Vue / Nine9 (Webpack/tsup)",
-        "Hono.js / Flask",
-        "Tauri",
-        "Unity / Godot.NET",
-        "TModLoader"
-    ],
-    "learnings": [
-        "片段着色器",
-        "2D骨骼动画",
-        "Animation Blend Tree",
-        "Tauri"
+    "mainAttacks": [
+        "Web全栈/偏前端",
+        "游戏开发",
+        "编译器"
     ],
     "studios": [
         {

@@ -8,42 +8,21 @@
                 我是 <b>FallingShrimp</b>，来自SolariiX的 <b>全栈/游戏</b> 开发爱好者。<br />
                 有梦想，但仍在学习的路上，尚无法实现。
             </DescriptionParagraph>
-            <DescriptionParagraph title="技能">
+            <DescriptionParagraph title="技术浅见...">
                 我讨厌 <b>vibe-coding </b>
                 <OutLink href="/claude-thunder">......吗？</OutLink><br />
                 我用 <b>Godot</b> 和 <b>Unity</b> 做过一些游戏，尚未发布，详见
-                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Agame&type=public">Github
-                </OutLink>
-                。<br />
+                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Agame&type=public">
+                    Github
+                </OutLink>。<br />
                 我热爱设计 <b>类型安全</b> / <b>高度IntelliSense</b> 的开发框架，详见
-                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Aframework&type=public">Github
-                </OutLink>
-                。<br />
-                <AlignBox>
-                    <span>
-                        语言
-                        <WhiteSpace :width="10" />
-                        <BlockLabel v-for="language in languages" :key="language">{{
-                            language
-                        }}</BlockLabel>
-                    </span>
-                    <br />
-                    <span>
-                        技术栈
-                        <WhiteSpace :width="10" />
-                        <BlockLabel v-for="framework in frameworks" :key="framework">{{
-                            framework
-                        }}</BlockLabel>
-                    </span>
-                    <br />
-                    <span>
-                        正在学习
-                        <WhiteSpace :width="10" />
-                        <BlockLabel v-for="learning in learnings" :key="learning">{{
-                            learning
-                        }}</BlockLabel>
-                    </span>
-                </AlignBox>
+                <OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Aframework&type=public">
+                    Github
+                </OutLink>。<br />
+                我主攻的工程领域是
+                <BlockLabel v-for="attack in mainAttacks" :key="attack">
+                    {{ attack }}
+                </BlockLabel>。
             </DescriptionParagraph>
             <DescriptionParagraph title="XP">
                 只是一个变态兽人控罢了，bottom。<br />
@@ -118,15 +97,12 @@ import SelfInformation from "./SelfInformation.vue";
 import BlockLabel from "./BlockLabel.vue";
 import FriendLink from "./FriendLink.vue";
 import AlignBox from "./AlignBox.vue";
-import WhiteSpace from "./WhiteSpace.vue";
 import BackgroundImage from "./BackgroundImage.vue";
 import {
     aliases,
-    frameworks,
     friends,
     cakeIsLie,
-    languages,
-    learnings,
+    mainAttacks,
     otherContactWay,
     projects,
     specialFriends,
