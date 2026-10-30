@@ -1,15 +1,30 @@
 import { PeopleDescriptor, ProjectData } from "./structs";
 import data from "./assets/info.json";
 
-export const labels: string[] = data.labels;
-export const email: string = data.email;
-export const qq: number = data.qq;
-export const otherContactWay = data.otherContactWay as Record<string, string>;
-export const mainAttacks: string[] = data.mainAttacks;
-export const studios: PeopleDescriptor[] = data.studios;
-export const teachers: PeopleDescriptor[] = data.teachers;
-export const cakeIsLie: PeopleDescriptor[] = data.cakeIsLie;
-export const specialFriends = data.specialFriends as Record<"lycaon" | "death", PeopleDescriptor>;
-export const friends: PeopleDescriptor[] = data.friends;
-export const projects: ProjectData[] = data.projects;
-export const aliases: string[] = data.aliases;
+const labels: string[] = data.labels;
+const email: string = data.email;
+const qq: number = data.qq;
+const otherContactWay = data.otherContactWay as Record<string, string>;
+const mainAttacks: string[] = data.mainAttacks;
+const studios: PeopleDescriptor[] = data.studios;
+const teachers: PeopleDescriptor[] = data.teachers;
+const cakeIsLie: PeopleDescriptor[] = data.cakeIsLie;
+const xps = data.xps as Record<"lycaon" | "death", PeopleDescriptor>;
+const friends: PeopleDescriptor[] = data.friends;
+const projects: ProjectData[] = data.projects;
+const aliases: string[] = data.aliases;
+
+export default {
+	labels,
+	email,
+	qq,
+	otherContactWay,
+	mainAttacks,
+	studios,
+	teachers,
+	cakeIsLie,
+	xps,
+	friends,
+	projects,
+	aliases
+};

@@ -1,24 +1,24 @@
 <template>
-    <div class="info">
-        <AvatarImage back="shrimp.png" front="lycaon.jpg" type="big" />
-        <NameLabel>陨落基围虾</NameLabel>
-        <div>
-            <BlockLabel v-for="label in labels" :key="label">{{ label }}</BlockLabel>
-        </div>
-        <CatcherText>好看的皮囊千篇一律，有趣的灵魂万里挑一</CatcherText>
-    </div>
+	<div class="info">
+		<AvatarImage back="shrimp.png" front="lycaon.jpg" type="big" />
+		<NameLabel>陨落基围虾</NameLabel>
+		<div>
+			<BlockLabel v-for="label in data.labels" :key="label">{{ label }}</BlockLabel>
+		</div>
+		<CatcherText>好看的皮囊千篇一律，有趣的灵魂万里挑一</CatcherText>
+	</div>
 </template>
 <script setup lang="ts">
 import AvatarImage from "./AvatarImage.vue";
 import NameLabel from "./NameLabel.vue";
 import BlockLabel from "./BlockLabel.vue";
 import CatcherText from "./CatcherText.vue";
-import { labels } from "@/info";
+import data from "@/info";
 </script>
 <style scoped>
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 </style>

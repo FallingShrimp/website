@@ -1,128 +1,134 @@
 {
-    "labels": [
-        "完美主义",
-        "Web 全栈 / 游戏开发",
-        "变态兽人控 / Gay(Bottom)",
-        "SolariiX",
-        "Rogue / 类银 / 类魂 重度爱好者"
-    ],
-    "email": "3161880837@qq.com",
-    "qq": 3161880837,
-    "otherContactWay": {
-        "哔哩哔哩": "https://space.bilibili.com/649063815",
-        "Github": "https://github.com/FallingShrimp",
-        "X/Twitter": "https://x.com/fallingshrimp"
-    },
-    "mainAttacks": [
-        "Web全栈/偏前端",
-        "游戏开发",
-        "编译器"
-    ],
-    "studios": [
-        {
-            "name": "SolariiX",
-            "website": "https://solariix.com/",
-            "description": "一家成立于2022年的独立游戏工作室。"
-        }
-    ],
-    "teachers": [
-        {
-            "name": "熊谷 凌",
-            "website": "https://github.com/FurryR/",
-            "description": "什么都写的全栈大佬，正在编写自己的博客，不谈对象。",
-            "avatar": "FurryR"
-        }
-    ],
-    "cakeIsLie": [
-        {
-            "name": "Cyberexplorer",
-            "website": "https://lanwywritexu.github.io/",
-            "description": "不要看着我以为我很傻，其实我一点也不聪明。"
-        },
-        {
-            "name": "子昭的技术博客",
-            "website": "https://tech.zeechow.eu.cc",
-            "description": "",
-            "avatar": "1"
-        },
-        {
-            "name": "Lonely",
-            "website": "https://v0id.ink"
-        },
-        {
-            "name": "lanying's blog",
-            "website": "https://blog.yufurry.cn/",
-            "avatar": "lanying",
-            "description": "一只青苹果小狼~"
-        }
-    ],
-    "specialFriends": {
-        "lycaon": {
-            "name": "冯·莱卡恩",
-            "website": "https://e621.net/posts?tags=von_lycaon",
-            "description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
-            "avatar": "lycaon",
-            "dangerous": true
-        },
-        "death": {
-            "name": "Death",
-            "website": "https://e621.net/posts?tags=death_(puss_in_boots)",
-            "description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
-            "avatar": "death",
-            "dangerous": true
-        }
-    },
-    "friends": [
-        {
-            "name": "阳毅",
-            "website": "https://yangyiit.top/",
-            "description": "保持热爱, 奔赴山海。"
-        },
-        {
-            "name": "TangDo158",
-            "website": "https://github.com/TangDo158",
-            "description": "也许是情绪不够稳定（存疑）。",
-            "innerAvatar": "tindunwi"
-        },
-        {
-            "name": "翟十光的博客",
-            "website": "https://zhaishis.com",
-            "description": "春江花朝秋月夜，往往取酒还独倾",
-            "avatar": "ssg"
-        }
-    ],
-    "projects": [
-        {
-            "website": "https://github.com/Shrimp-VM",
-            "image": "svm.jpg",
-            "title": "Shrimp-VM",
-            "techStack": "Godot",
-            "category": "框架",
-            "description": "一个Godot4.6高级编程语言VM，供玩家为UGC内容搭建自定义行为。"
-        },
-        {
-            "website": "https://github.com/FallingShrimp/nine",
-            "image": "ninesols.jpg",
-            "title": "Nine-9",
-            "techStack": "Vanilla",
-            "category": "框架",
-            "description": "一个轻量、高性能、类型安全、纯运行时的响应式 UserScript 框架。"
-        },
-        {
-            "website": "https://github.com/FallingShrimp/BeastBeat-proxy",
-            "image": "fsc.jpg",
-            "title": "BeastBeat-Proxy",
-            "techStack": "Python",
-            "category": "工具",
-            "description": "代理来自Patreon OAuth2的流量，绕过某神秘游戏的Patreon登录验证。"
-        }
-    ],
-    "aliases": [
-        "fshrimp.top",
-        "von-lycaon.我爱你",
-        "1145141919810.website",
-        "91vip.website",
-        "917891789178.xyz",
-        "fshrimp.gay"
-    ]
+	"labels": [
+		"完美主义",
+		"Web 全栈 / 游戏开发",
+		"变态兽人控 / Gay(Bottom)",
+		"SolariiX",
+		"Rogue / 类银 / 类魂 重度爱好者"
+	],
+	"email": "3161880837@qq.com",
+	"qq": 3161880837,
+	"otherContactWay": {
+		"哔哩哔哩": "https://space.bilibili.com/649063815",
+		"Github": "https://github.com/FallingShrimp",
+		"X/Twitter": "https://x.com/fallingshrimp"
+	},
+	"mainAttacks": [
+		"Web全栈/偏前端",
+		"游戏开发",
+		"编译器"
+	],
+	"studios": [
+		{
+			"name": "SolariiX",
+			"website": "https://solariix.com/",
+			"description": "一家成立于2022年的独立游戏工作室。"
+		}
+	],
+	"teachers": [
+		{
+			"name": "熊谷 凌",
+			"website": "https://github.com/FurryR/",
+			"description": "什么都写的全栈大佬，正在编写自己的博客，不谈对象。",
+			"avatar": "FurryR"
+		}
+	],
+	"cakeIsLie": [
+		{
+			"name": "Cyberexplorer",
+			"website": "https://lanwywritexu.github.io/",
+			"description": "不要看着我以为我很傻，其实我一点也不聪明。"
+		},
+		{
+			"name": "子昭的技术博客",
+			"website": "https://tech.zeechow.eu.cc",
+			"description": "",
+			"avatar": "1"
+		},
+		{
+			"name": "Lonely",
+			"website": "https://v0id.ink"
+		},
+		{
+			"name": "lanying's blog",
+			"website": "https://blog.yufurry.cn/",
+			"avatar": "lanying",
+			"description": "一只青苹果小狼~"
+		},
+		{
+			"name": "Dylan's blog",
+			"website": "https://blog.dylanlive.net",
+			"avatar": "dylan",
+			"description": "蛋糕是个谎言（路人）"
+		}
+	],
+	"xps": {
+		"lycaon": {
+			"name": "冯·莱卡恩",
+			"website": "https://e621.net/posts?tags=von_lycaon",
+			"description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
+			"avatar": "lycaon",
+			"dangerous": true
+		},
+		"death": {
+			"name": "Death",
+			"website": "https://e621.net/posts?tags=death_(puss_in_boots)",
+			"description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
+			"avatar": "death",
+			"dangerous": true
+		}
+	},
+	"friends": [
+		{
+			"name": "阳毅",
+			"website": "https://yangyiit.top/",
+			"description": "保持热爱, 奔赴山海。"
+		},
+		{
+			"name": "TangDo158",
+			"website": "https://github.com/TangDo158",
+			"description": "也许是情绪不够稳定（存疑）。",
+			"innerAvatar": "tindunwi"
+		},
+		{
+			"name": "翟十光的博客",
+			"website": "https://zhaishis.com",
+			"description": "春江花朝秋月夜，往往取酒还独倾",
+			"avatar": "ssg"
+		}
+	],
+	"projects": [
+		{
+			"website": "https://github.com/Shrimp-VM",
+			"image": "svm.jpg",
+			"title": "Shrimp-VM",
+			"techStack": "Godot",
+			"category": "框架",
+			"description": "一个Godot4.6高级编程语言VM，供玩家为UGC内容搭建自定义行为。"
+		},
+		{
+			"website": "https://github.com/FallingShrimp/nine",
+			"image": "ninesols.jpg",
+			"title": "Nine-9",
+			"techStack": "Vanilla",
+			"category": "框架",
+			"description": "一个轻量、高性能、类型安全、纯运行时的响应式 UserScript 框架。"
+		},
+		{
+			"website": "https://github.com/FallingShrimp/BeastBeat-proxy",
+			"image": "fsc.jpg",
+			"title": "BeastBeat-Proxy",
+			"techStack": "Python",
+			"category": "工具",
+			"description": "代理来自Patreon OAuth2的流量，绕过某神秘游戏的Patreon登录验证。"
+		}
+	],
+	"aliases": [
+		"fshrimp.top",
+		"von-lycaon.我爱你",
+		"1145141919810.website",
+		"91vip.website",
+		"917891789178.xyz",
+		"fshrimp.gay"
+	]
 }
