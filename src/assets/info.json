@@ -65,17 +65,13 @@
 	"xps": {
 		"lycaon": {
 			"name": "冯·莱卡恩",
-			"website": "https://e621.net/posts?tags=von_lycaon",
 			"description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
-			"avatar": "lycaon",
-			"dangerous": true
+			"avatar": "lycaon"
 		},
 		"death": {
 			"name": "Death",
-			"website": "https://e621.net/posts?tags=death_(puss_in_boots)",
 			"description": "哎呀主播你怎么这么帅🥰看得我春水都要泛滥了🥰",
-			"avatar": "death",
-			"dangerous": true
+			"avatar": "death"
 		}
 	},
 	"friends": [

@@ -9,8 +9,7 @@
 				有梦想，但仍在学习的路上，尚无法实现。
 			</DescriptionParagraph>
 			<DescriptionParagraph title="技术浅见...">
-				我讨厌 <b>vibe-coding </b>
-				<OutLink href="/claude-thunder">......吗？</OutLink><br />
+				说实话，我不喜欢 <b>vibe-coding </b>。<br>
 				我用 <b>Godot</b> 和 <b>Unity</b> 做过一些游戏，尚未发布，详见
 				<OutLink href="https://github.com/FallingShrimp?tab=repositories&q=topic%3Agame&type=public">
 					Github
@@ -34,7 +33,7 @@
 					自设/OC：希利普医生
 				</OutLink><br />
 				大尾巴白狼疑似命中注定。<br />
-				推荐观看：<br />
+				XP<br />
 				<FriendLink v-for="xp in xps" :people="xp" />
 			</DescriptionParagraph>
 			<DescriptionParagraph title="联系方式">
@@ -59,7 +58,7 @@
 			</DeskableTitle>
 			<HorizontalLine />
 			<BigTitle>友情链接</BigTitle><br />
-			<span>相关工作室</span>
+			<!-- <span>相关工作室</span>
 			<div class="friend-links">
 				<FriendLink v-for="people in studios" :people="people" :key="people.name" />
 			</div>
@@ -74,7 +73,13 @@
 			<span>蛋糕是个谎言</span>
 			<div class="friend-links">
 				<FriendLink v-for="people in cakeIsLie" :people="people" :key="people.name" />
-			</div>
+			</div> -->
+			<LinkList v-for="links, name in {
+				相关工作室: studios,
+				'高山流水，知音之交': friends,
+				'三人行，必有我师焉': teachers,
+				蛋糕是个谎言: cakeIsLie
+			}" :title="name" :links="links" />
 			<span>本网站的别名</span><br />
 			<AlignBox class="aliases">
 				<OutLink v-for="alias in aliases" :key="alias" :href="getUrl(alias)">{{ alias }}</OutLink>
@@ -100,6 +105,7 @@ import { copy, isDev } from "@/utils";
 import ArticleList from "./ArticleList.vue";
 import { articles } from "@/articles";
 import DeskableTitle from "./DeskableTitle.vue";
+import LinkList from "./LinkList.vue";
 
 const {
 	aliases,
