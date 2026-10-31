@@ -33,8 +33,6 @@
 					自设/OC：希利普医生
 				</OutLink><br />
 				大尾巴白狼疑似命中注定。<br />
-				XP<br />
-				<FriendLink v-for="xp in xps" :people="xp" />
 			</DescriptionParagraph>
 			<DescriptionParagraph title="联系方式">
 				邮箱：<OutLink href="mailto:3161880837@qq.com">3161880837@qq.com</OutLink><br />
