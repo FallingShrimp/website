@@ -58,27 +58,11 @@
 			</DeskableTitle>
 			<HorizontalLine />
 			<BigTitle>友情链接</BigTitle><br />
-			<!-- <span>相关工作室</span>
-			<div class="friend-links">
-				<FriendLink v-for="people in studios" :people="people" :key="people.name" />
-			</div>
-			<span>高山流水，知音之交</span>
-			<div class="friend-links">
-				<FriendLink v-for="people in friends" :people="people" :key="people.name" />
-			</div>
-			<span>三人行，必有我师焉</span>
-			<div class="friend-links">
-				<FriendLink v-for="people in teachers" :people="people" :key="people.name" />
-			</div>
-			<span>蛋糕是个谎言</span>
-			<div class="friend-links">
-				<FriendLink v-for="people in cakeIsLie" :people="people" :key="people.name" />
-			</div> -->
 			<LinkList v-for="links, name in {
 				相关工作室: studios,
-				'高山流水，知音之交': friends,
+				高山流水: friends,
 				'三人行，必有我师焉': teachers,
-				蛋糕是个谎言: cakeIsLie
+				'Cake is a lie.': cakeIsLie
 			}" :title="name" :links="links" />
 			<span>本网站的别名</span><br />
 			<AlignBox class="aliases">
